@@ -31,7 +31,6 @@
 		83860C4728256BBA00B1090D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83860C4628256BBA00B1090D /* SceneDelegate.swift */; };
 		83860C4E28256BBC00B1090D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83860C4D28256BBC00B1090D /* Assets.xcassets */; };
 		83860C5128256BBC00B1090D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83860C4F28256BBC00B1090D /* LaunchScreen.storyboard */; };
-		83860C5C28256BBC00B1090D /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83860C5B28256BBC00B1090D /* TaskManagerTests.swift */; };
 		83860C7628256C7000B1090D /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83860C7428256C7000B1090D /* TaskViewController.swift */; };
 		83860C7728256C7000B1090D /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83860C7528256C7000B1090D /* TaskViewController.xib */; };
 		83860C7A28257AA400B1090D /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83860C7828257AA400B1090D /* TaskCell.swift */; };
@@ -39,6 +38,13 @@
 		838A17A12836337E002C66A7 /* TaskViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A17A02836337E002C66A7 /* TaskViewControllerTest.swift */; };
 		83BAF5C72834997700A79E49 /* AddTaskViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAF5C62834997700A79E49 /* AddTaskViewControllerTest.swift */; };
 		83D7164328349E4A00595124 /* TaskViewPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7164228349E4A00595124 /* TaskViewPresenterTest.swift */; };
+		AA421E2C285B7582000B8748 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E2B285B7582000B8748 /* BaseScreen.swift */; };
+		AA421E2E285B75A8000B8748 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E2D285B75A8000B8748 /* UITestCase.swift */; };
+		AA421E30285B75C9000B8748 /* Scrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E2F285B75C9000B8748 /* Scrolling.swift */; };
+		AA421E32285B75EE000B8748 /* XCUIElements+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E31285B75EE000B8748 /* XCUIElements+Additions.swift */; };
+		AA421E34285B7614000B8748 /* WaitTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E33285B7614000B8748 /* WaitTime.swift */; };
+		AA421E35285B766A000B8748 /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83860C5B28256BBC00B1090D /* TaskManagerTests.swift */; };
+		AA421E37285B78E2000B8748 /* TaskManagerScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA421E36285B78E2000B8748 /* TaskManagerScreens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +101,13 @@
 		838A17A02836337E002C66A7 /* TaskViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewControllerTest.swift; sourceTree = "<group>"; };
 		83BAF5C62834997700A79E49 /* AddTaskViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewControllerTest.swift; sourceTree = "<group>"; };
 		83D7164228349E4A00595124 /* TaskViewPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewPresenterTest.swift; sourceTree = "<group>"; };
+		AA421E2A285B7582000B8748 /* TaskManagerUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskManagerUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA421E2B285B7582000B8748 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		AA421E2D285B75A8000B8748 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		AA421E2F285B75C9000B8748 /* Scrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrolling.swift; sourceTree = "<group>"; };
+		AA421E31285B75EE000B8748 /* XCUIElements+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElements+Additions.swift"; sourceTree = "<group>"; };
+		AA421E33285B7614000B8748 /* WaitTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitTime.swift; sourceTree = "<group>"; };
+		AA421E36285B78E2000B8748 /* TaskManagerScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerScreens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +268,7 @@
 		83860C3828256BBA00B1090D = {
 			isa = PBXGroup;
 			children = (
+				AA421E29285B74DE000B8748 /* UITests */,
 				83860C4328256BBA00B1090D /* TaskManager */,
 				83860C5A28256BBC00B1090D /* TaskManagerTests */,
 				83860C4228256BBA00B1090D /* Products */,
@@ -294,7 +308,6 @@
 			children = (
 				83D7164128349E3600595124 /* TaskList */,
 				83253DC12833F02D008B3AFF /* AddTask */,
-				83860C5B28256BBC00B1090D /* TaskManagerTests.swift */,
 			);
 			path = TaskManagerTests;
 			sourceTree = "<group>";
@@ -306,6 +319,21 @@
 				838A17A02836337E002C66A7 /* TaskViewControllerTest.swift */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		AA421E29285B74DE000B8748 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				83860C5B28256BBC00B1090D /* TaskManagerTests.swift */,
+				AA421E36285B78E2000B8748 /* TaskManagerScreens.swift */,
+				AA421E2B285B7582000B8748 /* BaseScreen.swift */,
+				AA421E2D285B75A8000B8748 /* UITestCase.swift */,
+				AA421E31285B75EE000B8748 /* XCUIElements+Additions.swift */,
+				AA421E33285B7614000B8748 /* WaitTime.swift */,
+				AA421E2F285B75C9000B8748 /* Scrolling.swift */,
+				AA421E2A285B7582000B8748 /* TaskManagerUITests-Bridging-Header.h */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +411,7 @@
 					};
 					83860C6028256BBC00B1090D = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 83860C4028256BBA00B1090D;
 					};
 				};
@@ -472,7 +501,6 @@
 			files = (
 				83D7164328349E4A00595124 /* TaskViewPresenterTest.swift in Sources */,
 				83BAF5C72834997700A79E49 /* AddTaskViewControllerTest.swift in Sources */,
-				83860C5C28256BBC00B1090D /* TaskManagerTests.swift in Sources */,
 				83253DC32833F042008B3AFF /* AddTaskPresenterTest.swift in Sources */,
 				838A17A12836337E002C66A7 /* TaskViewControllerTest.swift in Sources */,
 			);
@@ -482,6 +510,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA421E35285B766A000B8748 /* TaskManagerTests.swift in Sources */,
+				AA421E2C285B7582000B8748 /* BaseScreen.swift in Sources */,
+				AA421E2E285B75A8000B8748 /* UITestCase.swift in Sources */,
+				AA421E30285B75C9000B8748 /* Scrolling.swift in Sources */,
+				AA421E37285B78E2000B8748 /* TaskManagerScreens.swift in Sources */,
+				AA421E32285B75EE000B8748 /* XCUIElements+Additions.swift in Sources */,
+				AA421E34285B7614000B8748 /* WaitTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +677,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -669,6 +705,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -726,14 +763,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66B8DPX244;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tifoaudi.TaskManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "UITests/TaskManagerUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TaskManager;
@@ -744,14 +790,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66B8DPX244;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tifoaudi.TaskManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "UITests/TaskManagerUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TaskManager;
