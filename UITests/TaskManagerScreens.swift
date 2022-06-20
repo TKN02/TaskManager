@@ -20,11 +20,18 @@ class TaskManagerScreens : BaseScreen {
     }
     
     
-    private func taskDeadline(text:String) -> XCUIElement {
-        return element(withLabelContaining: text, type: .textField)
+    private func tasks(text:String) -> XCUIElement {
+        return element(withLabelContaining: text, type: .textField).firstMatch
         
     }
     
+    private func taskTypeButtons(button:String) -> XCUIElement {
+        return element(withLabelContaining: button, type: .button).firstMatch
+    }
+    
+    private var saveTaskButton:XCUIElement {
+        return app.buttons.matching(identifier: "Save Task").firstMatch
+    }
     
     
     
@@ -50,12 +57,34 @@ class TaskManagerScreens : BaseScreen {
     }
     
     @discardableResult
-    func deadline(placeholder:String,mytext:String) -> Self {
+    func deadline(text:String) -> Self {
         inActivity(named: "Task Deadline") {
-            taskDeadline(text: placeholder).typeText(mytext)
+            tasks(text: "Enter task deadline").tap()
+        }
+        return self
+    }
+    
+   @discardableResult
+    func title(text:String) -> Self {
+        inActivity(named: "Task Title") {
+            tasks(text: "Enter task title").tap()
+        }
+        return self
+    }
+    
+    @discardableResult
+    func selectBasicButton(buttonText:String) -> Self {
+        inActivity(named: "Select Basic Button") {
+            taskTypeButtons(button: buttonText).assertIsDisplayed()
+        }
+        return self
+    }
+    
+    @discardableResult
+    func saveTask() -> Self {
+        inActivity(named: "Save Task") {
+            saveTaskButton.tap()
         }
         return self
     }
 }
-
-

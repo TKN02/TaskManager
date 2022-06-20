@@ -11,8 +11,10 @@ import XCTest
 class TaskManagerTests: UITestCase {
     
     lazy var taskManagerTests = {TaskManagerScreens (app: app)} ()
+    let taskDeadlineField = XCUIApplication().textFields["Enter task deadline"]
+    let taskTitlefield = XCUIApplication().textFields["Enter task title"]
 
-    func testExample() {
+    func testBasicTask() {
         //app.tap()
        // app.debugDescription
         
@@ -22,8 +24,13 @@ class TaskManagerTests: UITestCase {
         //Then Add Task screen is displayed
             .selectTaskColour(colour: "Circle")
         
-            .deadline(placeholder: "Enter task deadline", mytext: "This is a test")
+        taskDeadlineField.tap()
+        taskDeadlineField.typeText("15July2022")
+        taskTitlefield.tap()
+        taskTitlefield.typeText("This is a test")
+        
+        taskManagerTests.selectBasicButton(buttonText: "Basic")
+        taskManagerTests.saveTask()
         
     }
-
 }
