@@ -7,63 +7,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC11DFA5-F51F-476B-92C2-7259E0ADFE18"
+            uuid = "30AF2E63-8724-4726-8274-783988FC0495"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UITests/TaskManagerTests.swift"
+            filePath = "UITests/BaseScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "testBasicTask()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DC11DFA5-F51F-476B-92C2-7259E0ADFE18 - c557918804d16d84"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskManagerUITests.TaskManagerTests.testBasicTask() -&gt; ()"
-                  moduleName = "TaskManagerUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TKN02/Documents/Practice%20Test%20Folder/TaskManager/UITests/TaskManagerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "691">
-               </Location>
-               <Location
-                  uuid = "DC11DFA5-F51F-476B-92C2-7259E0ADFE18 - c557918804d16c65"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskManagerUITests.TaskManagerTests.testBasicTask() -&gt; ()"
-                  moduleName = "TaskManagerUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TKN02/Documents/Practice%20Test%20Folder/TaskManager/UITests/TaskManagerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "787">
-               </Location>
-            </Locations>
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "BaseScreen"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FAB29004-7B03-4BBB-8219-7C72F6CDF045"
+            uuid = "56F29729-8E75-4D25-A727-EC08D15202D1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITests/TaskManagerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "testBasicTask()"
             landmarkType = "7">
          </BreakpointContent>

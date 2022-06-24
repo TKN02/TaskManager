@@ -14,25 +14,31 @@ class TaskManagerScreens : BaseScreen {
     private func addTaskButton(text :String) -> XCUIElement {
         return element(withLabelContaining: text, type: .button).firstMatch
     }
-    
+    //we use
     private func taskColour(colour:String) -> XCUIElement {
-        return app.buttons.firstMatch
+        return element(withLabelContaining: colour, type: .button).
+        
     }
-    
     
     private func tasks(text:String) -> XCUIElement {
         return element(withLabelContaining: text, type: .textField).firstMatch
         
     }
-    
+    //if you use [], you need to start with app then the element
     private func taskTypeButtons(button:String) -> XCUIElement {
-        return element(withLabelContaining: button, type: .button).firstMatch
+        return app.buttons[button].firstMatch
     }
     
     private var saveTaskButton:XCUIElement {
         return app.buttons.matching(identifier: "Save Task").firstMatch
     }
-    
+    //doing same as matching identifier
+    private var taskDeadlineField: XCUIElement {
+        return app.textFields["Enter task deadline"].firstMatch
+    }
+    private var taskTitlefield: XCUIElement {
+        return app.textFields["Enter task title"].firstMatch
+    }
     
     
     
@@ -59,7 +65,8 @@ class TaskManagerScreens : BaseScreen {
     @discardableResult
     func deadline(text:String) -> Self {
         inActivity(named: "Task Deadline") {
-            tasks(text: "Enter task deadline").tap()
+            taskDeadlineField.tap()
+            taskDeadlineField.typeText("15July2022")
         }
         return self
     }
@@ -75,7 +82,10 @@ class TaskManagerScreens : BaseScreen {
     @discardableResult
     func selectBasicButton(buttonText:String) -> Self {
         inActivity(named: "Select Basic Button") {
-            taskTypeButtons(button: buttonText).assertIsDisplayed()
+            if !(taskTypeButtons(button: buttonText)).isHittable {
+                app.tap()
+                taskTypeButtons(button: buttonText).tap()
+          }
         }
         return self
     }
