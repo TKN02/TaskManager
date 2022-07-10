@@ -14,9 +14,9 @@ public class BaseScreen {
         self.app = app
     }
 
-    func element(withLabelContaining text: String, type: XCUIElement.ElementType) -> XCUIElement {
+    func element(withLabelContaining text: String, type: XCUIElement.ElementType) -> XCUIElementQuery {
         let predicate = NSPredicate(format: "label CONTAINS[c] '\(text)'")
-        return app.descendants(matching: type).matching(predicate).firstMatch
+        return app.descendants(matching: type).matching(predicate)
     }
 
     @discardableResult

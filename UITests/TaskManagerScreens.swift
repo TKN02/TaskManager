@@ -11,12 +11,16 @@ class TaskManagerScreens : BaseScreen {
     
     // MARK: - UI Element Queries
     
+    private func initialTabs(tabText:String) ->XCUIElement {
+        return element(withLabelContaining: tabText, type: .button).firstMatch
+    }
+    
     private func addTaskButton(text :String) -> XCUIElement {
         return element(withLabelContaining: text, type: .button).firstMatch
     }
-    //we use
-    private func taskColour(colour:String) -> XCUIElement {
-        return element(withLabelContaining: colour, type: .button).
+    //In BaseScreen,you need to defife as XCUIElementQuery
+    private func taskColour(colour: String,number: Int) -> XCUIElement {
+        return element(withLabelContaining: colour, type: .button).element(boundBy: number)
         
     }
     
@@ -46,6 +50,15 @@ class TaskManagerScreens : BaseScreen {
     
     
     // MARK: - Steps
+    
+    @discardableResult
+    func upcomingTask(buttonText:String) -> Self {
+        inActivity(named: "Upcoming Button") {
+            initialTabs(tabText: buttonText).tapHittableButton(withText: buttonText)
+        }
+        return self
+    }
+    
     @discardableResult
     func addTask(button:String) -> Self {
         inActivity(named: "Add Task") {
@@ -55,9 +68,9 @@ class TaskManagerScreens : BaseScreen {
     }
     
     @discardableResult
-    func selectTaskColour(colour:String) -> Self {
+    func selectTaskColour(colour: String, number:Int ) -> Self {
         inActivity(named: "selectTaskColour"){
-            taskColour(colour: colour).tap()
+            taskColour(colour: colour, number: number).tap()
         }
         return self
     }
@@ -66,22 +79,23 @@ class TaskManagerScreens : BaseScreen {
     func deadline(text:String) -> Self {
         inActivity(named: "Task Deadline") {
             taskDeadlineField.tap()
-            taskDeadlineField.typeText("15July2022")
-        }
-        return self
-    }
-    
-   @discardableResult
-    func title(text:String) -> Self {
-        inActivity(named: "Task Title") {
-            tasks(text: "Enter task title").tap()
+            taskDeadlineField.typeText(text)
         }
         return self
     }
     
     @discardableResult
-    func selectBasicButton(buttonText:String) -> Self {
-        inActivity(named: "Select Basic Button") {
+    func title(text:String) -> Self {
+        inActivity(named: "Task Title") {
+            taskTitlefield.tap()
+            taskTitlefield.typeText(text)
+        }
+        return self
+    }
+
+    @discardableResult
+    func selectButton(buttonText:String) -> Self {
+        inActivity(named: "Select\(buttonText) Button") {
             if !(taskTypeButtons(button: buttonText)).isHittable {
                 app.tap()
                 taskTypeButtons(button: buttonText).tap()

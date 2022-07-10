@@ -11,27 +11,39 @@ import XCTest
 class TaskManagerTests: UITestCase {
     
     lazy var taskManagerTests = {TaskManagerScreens (app: app)} ()
-   
-    //let taskDeadlineField = XCUIApplication().textFields["Enter task deadline"]
-    let taskTitlefield = XCUIApplication().textFields["Enter task title"]
 
     func testBasicTask() {
-        //app.tap()
-       // app.debugDescription
         
         //Tap on Add Task Button
+        taskManagerTests.upcomingTask(buttonText: "Upcoming")
         taskManagerTests.addTask(button: "Add Task")
         
-        //Then Add Task screen is displayed
-            .selectTaskColour(colour: "Circle")
-       //taskDeadlineField.tap()
-        //taskDeadlineField.typeText("15July2022")
-            .deadline(text: "15July2022")
-        taskTitlefield.tap()
-        taskTitlefield.typeText("This is a test")
+        //Then Add a Basic Task
+            .selectTaskColour(colour: "Circle", number: 3)
+            .deadline(text: "15July2022, 15:30")
+            .title(text: "This is a Basic Task test")
+            .selectButton(buttonText: "Basic")
+       
         
-        taskManagerTests.selectBasicButton(buttonText: "Basic")
-        taskManagerTests.saveTask()
-        
+        //Save Task
+            .saveTask()
     }
+        
+    func testUrgentTask() {
+            
+            //Tap on Add Task Button
+        taskManagerTests.upcomingTask(buttonText: "Done")
+            taskManagerTests.addTask(button: "Add Task")
+            
+            //Then select Task Colour Red
+            .selectTaskColour(colour: "Circle", number: 2)
+            //Then complete other fields
+            .deadline(text: "29July2022, 16:00")
+            .title(text: "This is an urgent task, Please complete asap")
+            .selectButton(buttonText: "Urgent")
+        
+            //Save Task
+            .saveTask()
+        }
+    
 }
